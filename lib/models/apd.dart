@@ -3,12 +3,14 @@ class AlatPelindungDiri {
   String jenis;
   String spesifikasi;
   String standarKeamanan;
+  String gambar;
 
   AlatPelindungDiri({
     required this.nama,
     required this.jenis,
     required this.spesifikasi,
     required this.standarKeamanan,
+    required this.gambar,
   });
 
   factory AlatPelindungDiri.fromJson(Map<String, dynamic> json) {
@@ -17,6 +19,7 @@ class AlatPelindungDiri {
       jenis: json['jenis'],
       spesifikasi: json['spesifikasi'],
       standarKeamanan: json['standar_keamanan'],
+      gambar: json['gambar'],
     );
   }
 }

@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spk3/cubit/apd_cubit.dart';
 import 'package:spk3/cubit/apd_state.dart';
 import 'package:spk3/models/apd.dart';
+import 'package:spk3/shared/constants.dart';
 import 'package:spk3/shared/widgets/custom_card.dart';
 import 'package:spk3/shared/widgets/list_widget.dart';
 
@@ -433,6 +434,20 @@ class Detail extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 32, horizontal: 22),
             child: ListWidget(
               children: [
+                Container(
+                  height: 320,
+                  decoration: BoxDecoration(
+                    color: Colors.blueGrey,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(12),
+                    child: Image.network("${Constants.baseUrl}/alat/${alat.gambar}"),
+                  ),
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
                 Row(
                   children: [
                     Expanded(
